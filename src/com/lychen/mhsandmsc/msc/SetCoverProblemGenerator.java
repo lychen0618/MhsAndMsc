@@ -15,7 +15,8 @@ public class SetCoverProblemGenerator {
 
         for (int i = 0; i < numOfSets; i++) {
 
-            weights[i] = scanner.nextInt();
+            // weights[i] = scanner.nextInt();
+            scanner.nextInt();
             int setSize = scanner.nextInt();
             BitSet newSet = new BitSet(universeSize);
 
@@ -65,7 +66,8 @@ public class SetCoverProblemGenerator {
         ArrayList<BitSet> setContents = new ArrayList<BitSet>(numOfSets);
 
         for (int i = 0; i < numOfSets; i++) {
-            weights[i] = scanner.nextInt();
+            //weights[i] = scanner.nextInt();
+            scanner.nextInt();
             BitSet newSet = new BitSet(universeSize);
             setContents.add(i, newSet);
         }
@@ -74,7 +76,7 @@ public class SetCoverProblemGenerator {
             int numOfSetsForElem = scanner.nextInt();
             for (int j = 0; j < numOfSetsForElem; j++) {
 
-                int set = scanner.nextInt(); //reduce set number by 1 to fit indices
+                int set = scanner.nextInt() - 1; //reduce set number by 1 to fit indices
                 setContents.get(set).set(i);
 
             }
